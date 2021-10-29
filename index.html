@@ -6,22 +6,29 @@
 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
 crossorigin="anonymous">
 </script>
+
 </head>
 <body>
-<div id="part1">  </div>
+<h2> Serialized Data: </h2>
+<div id="part2">  </div>
+<div id="part3">  </div>
+
 <script language="javascript">
-    // $.get("https://erikahowell.github.io/json-songlist/songlist.json",  
-    //     function(data) {
-    //     str = JSON.stringify(data);
-    //     document.getElementById("part1").innerHTML = "try";
-    // });
     $.get("https://erikahowell.github.io/json-songlist/songlist.json",
-			function(data) {
-				/* Part 2: Serialize and display */
-				json_str = JSON.stringify(data);
-				document.getElementById("part1").innerHTML = json_str;
-            }
-    )
+	function(data) {
+		// part 2: serialize data
+		json_str = JSON.stringify(data);
+		document.getElementById("part2").innerHTML = json_str;
+        // part 3: put data in table
+        songlist = "";
+        data.forEach(function(song) {
+            songlist += "<br>" + song.title + "<br>";
+            songlist += "Artist: " + song.artist + "<br>";
+            songlist += "Genre: " + song.genre + "<br>";
+            songlist += "Released: " + song.year + "<br>";
+        });
+        document.getElementById("part3").innerHTML = songlist;
+    });
 </script>
 </body>
 </html>
