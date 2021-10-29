@@ -2,18 +2,26 @@
 
 <html>
 <head>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+crossorigin="anonymous">
+</script>
 </head>
 <body>
-<div id="part1"></div>
-<script type = "text/javascript" language="javascript">
-    $(document).ready(function(){
-        // https://erikahowell.github.io/json-songlist/songlist.json
-        $.getJSON("songlist.json", function(data) {
-            let str = JSON.stringify(data);
-            document.getElementById("part1").innerHTML = str;
-        });
-    });
+<div id="part1">  </div>
+<script language="javascript">
+    // $.get("https://erikahowell.github.io/json-songlist/songlist.json",  
+    //     function(data) {
+    //     str = JSON.stringify(data);
+    //     document.getElementById("part1").innerHTML = "try";
+    // });
+    $.get("https://erikahowell.github.io/json-songlist/songlist.json",
+			function(data) {
+				/* Part 2: Serialize and display */
+				json_str = JSON.stringify(data);
+				document.getElementById("part1").innerHTML = json_str;
+            }
+    )
 </script>
 </body>
 </html>
