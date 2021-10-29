@@ -1,0 +1,62 @@
+[
+    {
+        "artist": "Queen",
+        "title": "Bohemian Rhapsody",
+        "music-genre": "Rock",
+        "release-year": "1975",
+    }
+    {
+        "artist": "Lil Nas X",
+        "title": "MONTERO",
+        "music-genre": "Pop",
+        "release-year": "2021",
+    }
+    {
+        "artist": "Bowling For Soup",
+        "title": "1985",
+        "music-genre": "Punk",
+        "release-year": "2004",
+    }
+    {
+        "artist": "blink-182",
+        "title": "Dammit",
+        "music-genre": "Punk",
+        "release-year": "1997",
+    }
+    {
+        "artist": "RADWIMPS",
+        "title": "Zenzenzense",
+        "music-genre": "J-Pop",
+        "release-year": "2016",
+    }
+    {
+        "artist": "The Struts",
+        "title": "Roll Up",
+        "music-genre": "Rock",
+        "release-year": "2016",
+    }
+    {
+        "artist": "Nirvana",
+        "title": "Lithium",
+        "music-genre": "Grunge",
+        "release-year": "1991",
+    }
+    {
+        "artist": "The Vandals",
+        "title": "I've Got An Ape Drape",
+        "music-genre": "Punk",
+        "release-year": "1998",
+    }
+    {
+        "artist": "The Kooks",
+        "title": "Taking Pictures Of You",
+        "music-genre": "Indie Pop",
+        "release-year": "2011",
+    }
+    {
+        "artist": "Lorde",
+        "title": "Buzzcut Season",
+        "music-genre": "Pop",
+        "release-year": "2013",
+    }
+]
