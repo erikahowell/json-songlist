@@ -11,6 +11,8 @@ crossorigin="anonymous">
 <body>
 <h2> Serialized Data: </h2>
 <div id="part2">  </div>
+<h2> Data in Table: </h2>
+<div id="part4">  </div>
 <div id="part3">  </div>
 
 <script language="javascript">
@@ -28,6 +30,33 @@ crossorigin="anonymous">
             songlist += "Released: " + song.year + "<br>";
         });
         document.getElementById("part3").innerHTML = songlist;
+        // part 4: filter the data
+        let arr = [];
+        data.forEach(function(song) {
+            if (arr.indexOf(song.genre) == -1) {
+                arr.push(song.genre);
+            }
+        });
+        var t = "<form> <select id='genreFilter' name='Genre' size='1'>";
+        arr.forEach(function(genre) {
+            t += "<option>" + genre + "</option>";
+        });
+        t += "</select> <button id='button' type='button'> Filter </button>";
+        t += "</form>";
+        document.getElementById("part4").innerHTML = t;
+        $("#button").click(function() {
+            filterlist = "";
+            var select = document.getElementById("genreFilter").value;
+            data.forEach(function(song) {
+                if (song.genre == select) {
+                    filterlist += "<br>" + song.title + "<br>";
+                    filterlist += "Artist: " + song.artist + "<br>";
+                    filterlist += "Genre: " + song.genre + "<br>";
+                    filterlist += "Released: " + song.year + "<br>";
+                }
+            });
+            document.getElementById("part3").innerHTML = filterlist;
+        });
     });
 </script>
 </body>
